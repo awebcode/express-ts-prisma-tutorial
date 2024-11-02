@@ -3,6 +3,8 @@
 
 # Key Features of This Implementation:
 - Express Setup: Basic Express server setup with JSON body parsing.
+- Prisma & POSTGRESQL
+- MVC Architecture
 - CRUD Operations: Handlers for creating, reading, updating, and deleting Book items.
 - UUID Handling: Uses UUIDs for the id field.
 - Zod Validation: Validates incoming requests to - - - ensure that the title is provided and that it meets specified criteria.

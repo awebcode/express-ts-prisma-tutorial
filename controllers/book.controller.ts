@@ -93,7 +93,7 @@ export const updateBookById = async (req: Request, res: Response, next: NextFunc
     if (!(await isBookExistsById(id))) {
       throw new AppError("Book not found", 404);
     }
-    const reqBody = bookSchema.parse(req.body);
+    const reqBody = bookSchema.partial().parse(req.body);
     const book = await prisma.book.update({ where: { id }, data: reqBody });
     res.status(200).json(book);
   } catch (error) {
